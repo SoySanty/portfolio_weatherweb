@@ -1,0 +1,17 @@
+@import "search";
+
+/* location-and-date */
+.location-and-date {
+   display: flex;
+   gap: 1rem;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 2rem;
+   width: 100%;
+}
+
+.location-and-date__location {
+   margin: 0;
+   font-size: 2em;
+   font-weight: 600;
+}
