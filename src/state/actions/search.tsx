@@ -1,4 +1,4 @@
-import { SEARCH_RESULTS, SET_PLACE } from "./list";
+import { SEARCH_RESULTS, SET_DAILY, SET_HOURLY, SET_PLACE } from "./list";
 
 const searchResults = (payload: [string]) => ({
   type: SEARCH_RESULTS,
@@ -9,4 +9,14 @@ const setPlace = (payload: string) => ({
   type: SET_PLACE,
   payload,
 });
-export { searchResults, setPlace };
+
+const setDaily = (payload: [any]) => ({
+  type: SET_DAILY,
+  payload,
+});
+
+const setHourly = (payload: [any]) => ({
+  type: SET_HOURLY,
+  payload,
+});
+export { searchResults, setPlace, setDaily, setHourly };

@@ -1,17 +1,23 @@
 type Props = {
-  hour: string;
+  time: string;
   icon?: string;
   img?: string;
-  temperature: number;
+  temp: number;
 };
 
 const HourlyItem = (props: Props) => {
-  const { hour = "6am", icon = "sunny", temperature } = props;
+  const { time = "6am", icon = "sunny", temp } = props;
   return (
     <div className="weather-by-hour__item">
-      <div className="weather-by-hour__hour">{hour}</div>
-      <img src={props.img ?? "icons/mostly-sunny.svg"} alt={icon ?? ""} />
-      <div>{temperature}&deg;</div>
+      <div className="weather-by-hour__hour">{time}</div>
+      <div className="weather-by-hour__icon_container">
+        <img
+          src={props.img ?? `https://openweathermap.org/img/wn/${icon}@4x.png`}
+          alt="weather - icon"
+          className="weather-by-hour__icon"
+        />
+      </div>
+      <div>{temp}&deg;</div>
     </div>
   );
 };

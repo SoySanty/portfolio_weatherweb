@@ -28,7 +28,11 @@ const NextDaysItem = (props: Props) => {
       </div>
 
       <div className="next-5-days__icon">
-        <img src={icon} alt="Sunny" />
+        <img
+          src={`https://openweathermap.org/img/wn/${icon}@4x.png`}
+          alt="Weather - icon"
+          className="next-5-days__icon-img"
+        />
       </div>
 
       <div className="next-5-days__rain">

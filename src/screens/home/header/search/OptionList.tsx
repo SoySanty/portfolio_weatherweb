@@ -1,22 +1,27 @@
 // import { useShowWeather } from "components/hooks/search/useShowWeather";
-import { useDispatch, useSelector } from "react-redux";
-import { setPlace } from "state/actions/search";
+import { useDispatch } from "react-redux";
+import { setDaily, setHourly, setPlace } from "state/actions/search";
 import getWeather from "scripts/getWeather";
 
 type Props = { data: any[] };
 
 const OptionList = (props: Props) => {
-  //Redux
-  const store = useSelector((store: any) => store.search.placeTarget);
-
   const dispatch = useDispatch();
 
   //Handle events
-  const handleClick = (item: any) => {
-    dispatch(setPlace(item));
+  const handleClick = (data: any) => {
+    dispatch(setPlace(data));
+    //Recieving data from get weather
     getWeather({
-      ...item.position,
-      callbackWeather: (data: any) => dispatch(setPlace(data)),
+      ...data.position,
+      callbackWeather: (props: { current: any; hourly: any; daily: any }) => {
+        const { current, hourly, daily } = props;
+        console.log(daily);
+
+        dispatch(setPlace(current));
+        dispatch(setHourly(hourly));
+        dispatch(setDaily(daily));
+      },
     });
   };
 
