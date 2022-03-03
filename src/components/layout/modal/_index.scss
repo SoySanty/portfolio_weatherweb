@@ -1,0 +1,53 @@
+.modal {
+   position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   // background: rgba(1, 1, 1, 0.5);
+   backdrop-filter: blur(1rem);
+   top: 0;
+   left: 0;
+   padding: 2rem;
+   width: 100vw;
+   height: 100vh;
+
+   .modal_container {
+      background: rgba(171, 210, 228, 0.404);
+      max-width: 35rem;
+      padding: 2rem;
+
+      .modal_features {
+         margin-left: 1rem;
+
+         .modal_subtitle {
+            margin-top: .5rem;
+         }
+
+         .modal_indent {
+            margin-left: 1rem;
+            margin-top: .5rem;
+         }
+
+         .modal_link {
+            color: black;
+         }
+      }
+
+      .modal_button_container {
+         width: 100%;
+         text-align: center;
+
+         .modal_button {
+            padding: .7rem 1.4rem;
+            width: fit-content;
+            margin-top: 1rem;
+            color: rgb(49, 49, 49);
+            border: none;
+            background: none;
+            background: rgba(255, 255, 255, 0.692);
+            cursor: pointer;
+         }
+      }
+   }
+
+}

@@ -1,5 +1,6 @@
 import NextDaysItem from "components/common/Daily/NextDaysItem";
 import HourlyItem from "components/common/Hourly/HourlyItem";
+import WelcomeModal from "components/layout/modal";
 import { useSelector } from "react-redux";
 import Header from "screens/home/header/index";
 import SiteStats from "./stats";
@@ -7,6 +8,13 @@ import SiteStats from "./stats";
 const Home = () => {
   //Get store data
   const store = useSelector((store: any) => store.search);
+
+  //Verifiying if the storage has data
+  if (localStorage.getItem("welcomeModal")) {
+    return <WelcomeModal />;
+  } else {
+    localStorage.setItem("welcomeModal", "true");
+  }
 
   return (
     <main className="main-container">

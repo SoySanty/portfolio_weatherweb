@@ -6,8 +6,12 @@
 /*-------------------------------*/
 /* SRC */
 /*-------------------------------*/
-@import "components/layout/menu";
+//Screens
 @import "screens/home";
+
+//Layout
+@import "components/layout/menu";
+@import "components/layout/modal";
 
 //Common components
 @import "components/common/Daily";
