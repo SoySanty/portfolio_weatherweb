@@ -16,11 +16,13 @@ const SiteStats = (props: Props) => {
     <>
       <div className="current-temperature">
         <div className="current-temperature__icon-container">
-          <img
-            src={`https://openweathermap.org/img/wn/${icon}@4x.png`}
-            className="current-temperature__icon"
-            alt=""
-          />
+          {icon && (
+            <img
+              src={`https://openweathermap.org/img/wn/${icon}@4x.png`}
+              className="current-temperature__icon"
+              alt=""
+            />
+          )}
         </div>
         <div className="current-temperature__content-container">
           <div className="current-temperature__value">{temp}&deg;</div>

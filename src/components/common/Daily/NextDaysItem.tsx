@@ -36,11 +36,11 @@ const NextDaysItem = (props: Props) => {
       </div>
 
       <div className="next-5-days__rain">
-        {rain}%<div className="next-5-days__label">Rain</div>
+        {rain || "0"}%<div className="next-5-days__label">Rain</div>
       </div>
 
       <div className="next-5-days__wind">
-        {wind}mph
+        {wind}Km/h
         <div className="next-5-days__label">Wind</div>
       </div>
     </div>

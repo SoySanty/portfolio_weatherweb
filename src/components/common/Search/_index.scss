@@ -2,10 +2,11 @@
    position: relative;
    display: flex;
    align-items: center;
-   margin-left: auto;
    border-bottom: .1rem solid white;
 
    .search-input {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
       padding: .5rem 1rem;
       background: none;
       border: none;
@@ -27,6 +28,7 @@
       color: white;
       background: none;
       border: none;
+      pointer-events: none;
    }
 
    .search-results {
@@ -39,6 +41,7 @@
       background: rgba(1, 1, 1, .2);
       backdrop-filter: blur(1rem);
       overflow-x: auto;
+      z-index: 1;
 
       .search-results__list {
          padding: 0;
@@ -55,4 +58,13 @@
       }
    }
 
+}
+
+/*-------------------------------*/
+/* RESPONSIVE */
+/*-------------------------------*/
+@media screen and (max-width: 750px) {
+   .search {
+      margin: .5rem auto;
+   }
 }

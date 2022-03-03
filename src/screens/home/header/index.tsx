@@ -1,5 +1,5 @@
-import Menu from "components/layout/menu/Menu";
-import Search from "screens/home/header/search";
+// import Menu from "components/layout/menu/Menu";
+import Search from "components/common/Search/";
 
 type Props = {
   name: string;
@@ -11,14 +11,14 @@ const Header = (props: Props) => {
 
   return (
     <header className="location-and-date">
+      <div className="top-bar">
+        <Search />
+        {/* <Menu /> */}
+      </div>
       <div className="">
         <h1 className="location-and-date__location">{name}</h1>
         <div>{time}</div>
       </div>
-
-      <Search />
-
-      <Menu />
     </header>
   );
 };

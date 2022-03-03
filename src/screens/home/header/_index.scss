@@ -1,11 +1,11 @@
-@import "search";
+@import "components/common/Search";
 
 /* location-and-date */
 .location-and-date {
    display: flex;
-   gap: 1rem;
    justify-content: space-between;
    align-items: center;
+   flex-direction: row-reverse;
    margin-bottom: 2rem;
    width: 100%;
 }
@@ -14,4 +14,28 @@
    margin: 0;
    font-size: 2em;
    font-weight: 600;
+}
+
+.top-bar {
+   display: flex;
+   gap: 1rem;
+}
+
+/*-------------------------------------*/
+/* RESPONSIVE */
+/*-------------------------------------*/
+@media screen and(max-width: 768px) {
+   .location-and-date {
+      display: block;
+   }
+
+   .location-and-date__location {
+      font-size: 1.7em;
+   }
+
+   .top-bar {
+      margin-bottom: .5rem;
+      justify-content: space-between;
+      width: 100%;
+   }
 }

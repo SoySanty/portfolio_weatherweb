@@ -3,12 +3,13 @@ import timezone from "moment-timezone";
 import moment from "moment-timezone";
 
 //Return the search results
-const getWeather = (props: {
-  lon: number;
-  lat: number;
-  callbackWeather: any;
-}) => {
-  const { lon, lat, callbackWeather } = props;
+const getWeather = (props: { parameters: any; callbackWeather: any }) => {
+  const {
+    parameters: {
+      position: { lon, lat },
+    },
+    callbackWeather,
+  } = props;
 
   if (!!!props) {
     return;
@@ -54,7 +55,11 @@ const getWeather = (props: {
           wind: day.wind_speed,
         }));
 
-      callbackWeather({ current, hourly, daily });
+      callbackWeather({
+        current: { ...props.parameters, ...current },
+        hourly,
+        daily,
+      });
     });
 };
 

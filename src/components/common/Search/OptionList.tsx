@@ -9,14 +9,12 @@ const OptionList = (props: Props) => {
   const dispatch = useDispatch();
 
   //Handle events
-  const handleClick = (data: any) => {
-    dispatch(setPlace(data));
+  const handleClick = (parameters: any) => {
     //Recieving data from get weather
     getWeather({
-      ...data.position,
-      callbackWeather: (props: { current: any; hourly: any; daily: any }) => {
+      parameters,
+      callbackWeather: (props: any) => {
         const { current, hourly, daily } = props;
-        console.log(daily);
 
         dispatch(setPlace(current));
         dispatch(setHourly(hourly));

@@ -7,7 +7,6 @@ import SiteStats from "./stats";
 const Home = () => {
   //Get store data
   const store = useSelector((store: any) => store.search);
-  console.log(store);
 
   return (
     <main className="main-container">
@@ -16,7 +15,7 @@ const Home = () => {
       <SiteStats {...store.placeTarget} />
 
       <div className="weather-by-hour">
-        <h2 className="weather-by-hour__heading">Today's weather</h2>
+        <h2 className="weather-by-hour__heading">Hourly</h2>
         <div className="weather-by-hour__container">
           {store.hourly.map((data: any, index: number) => (
             <HourlyItem key={index} {...data} />

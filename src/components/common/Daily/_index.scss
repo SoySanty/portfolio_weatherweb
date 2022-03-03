@@ -60,6 +60,16 @@
    margin-bottom: 0.6em;
 }
 
+/*------------------------------*/
+/* RESPONSIVE */
+/*------------------------------*/
+
+@media screen and (max-width: 600px) {
+   .next-5-days__row {
+      height: fit-content;
+   }
+}
+
 @media screen and (min-width: 450px) {
 
    .next-5-days__date,

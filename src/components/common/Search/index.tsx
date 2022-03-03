@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { SearchIcon } from "components/common/icons";
 import { useShowResults } from "components/hooks/search/useShowResults";
-import OptionList from "screens/home/header/search/OptionList";
+import OptionList from "./OptionList";
 
 const Search = (): JSX.Element => {
   //Value of the search input

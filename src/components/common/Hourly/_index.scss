@@ -1,7 +1,9 @@
 /* weather-by-hour */
 .weather-by-hour {
-   display: none;
+   // display: none;
    width: 100%;
+   overflow-x: auto;
+   padding-bottom: 1rem;
 }
 
 @media screen and (min-width: 700px) {
@@ -13,6 +15,7 @@
 .weather-by-hour__container {
    display: flex;
    justify-content: space-between;
+   min-width: 30rem;
 }
 
 .weather-by-hour__heading,
@@ -35,7 +38,7 @@
    width: 13%;
    border-radius: 5px;
    background-color: rgba(0, 0, 0, 0.15);
-   font-size: 1.125em;
+   font-size: 1rem;
    text-align: center;
 
 
@@ -54,7 +57,9 @@
 @media screen and (min-width: 880px) {
    .weather-by-hour__item {
       width: 6.05em;
+      font-size: 1.1rem;
    }
+
 }
 
 .weather-by-hour__hour {
