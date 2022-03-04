@@ -4,12 +4,33 @@
 .main-container {
    display: flex;
    flex-wrap: wrap;
+   justify-content: center;
+   min-height: 100vh;
 }
 
 @media screen and (min-width: 920px) {
    .main-container {
       width: 880px;
-      margin: 8px auto;
+      margin: auto;
       font-size: 1.1em;
+   }
+}
+
+//Search section
+.search-section {
+   display: flex;
+   gap: 1rem;
+   flex-direction: column;
+   text-align: center;
+   padding: 3rem;
+   height: 100%;
+
+   .search-section__subtitle {
+      font-size: .9rem;
+   }
+
+   .search-box {
+      width: fit-content;
+      margin: auto;
    }
 }
