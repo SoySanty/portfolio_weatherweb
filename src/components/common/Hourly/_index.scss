@@ -4,6 +4,10 @@
    width: 100%;
    overflow-x: auto;
    padding-bottom: 1rem;
+
+   .weather-by-hour__heading {
+      margin-bottom: 1rem;
+   }
 }
 
 @media screen and (min-width: 700px) {
